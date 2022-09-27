@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>出校</title>
+  <style>
+    img{
+      width: 30%;
+      display: block;
+	  margin: 0 auto;
+      padding-top: 1.3rem;
+    }
+    #time{
+      color: red;
+      text-align: center;
+      font-size: 60px;
+      font-weight: normal;
+      text-shadow: -1px 0 darkred,
+                 0 -1px darkred,
+                  1px 0 darkred,
+                  0 1px darkred;
+    }
+    #p{
+      font-size: 80px;
+      font-weight: normal;
+      text-align: center;
+    }
+	#h{
+		font-weight: normal;
+		font-size: 50px;
+		padding: 0;
+	}
+  </style>
+</head>
+
+<body>
+  <div id="p">
+    <p> 
+      出校
+    </p >
+  </div>
+
+<div id="h">
+	<img src="201935010505.png">
+	<p align="center">陈渊龙-201935010505</p>
+	<HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color=#987cb9,strength=10)" width="80%" color=#987cb9 SIZE=1>
+</div>
+
+  <div id="p">
+  
+  <p> 
+    免审核，验证通过
+  </p >
+</div>
+<div id="time">
+  <p id="myclock"></p >
+</div>
+<img src="guo.png">
+<script>
+  function show_time() {
+    var time=new Date();
+    var month=time.getMonth()+1;
+    var day=time.getDate();
+    var hour=time.getHours();
+    var min=time.getMinutes();
+    var sec=time.getSeconds();
+    var ss = time.getMilliseconds();
+    document.getElementById("myclock").innerHTML="<p>" +checktime(hour)+":"+checktime(min)+":"+checktime(sec)+"."+ss;
+  }
+  //serInterval:以相同的时间间隔执行某个操作
+  setInterval("show_time()",1);
+  function checktime(i){
+    if(i<10){
+      i="0"+ i
+    }
+    return i;
+  }
+</script>
+</body>
+</html>
